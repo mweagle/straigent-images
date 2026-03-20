@@ -1,4 +1,4 @@
-name: Build pdca-languages-go-tools-go-test-cov
+name: Build straigent-engine-languages-go-tools-go-test-cov
 
 on:
   push:
@@ -39,7 +39,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/${{ github.repository_owner }}/pdca-languages-go-tools-go-test-cov
+          images: ghcr.io/${{ github.repository_owner }}/straigent-engine-languages-go-tools-go-test-cov
           tags: |
             type=sha
             type=ref,event=branch

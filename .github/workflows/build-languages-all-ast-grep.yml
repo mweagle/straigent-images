@@ -1,4 +1,4 @@
-name: Build pdca-languages-all-ast-grep
+name: Build straigent-engine-languages-all-ast-grep
 
 on:
   push:
@@ -39,7 +39,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/${{ github.repository_owner }}/pdca-languages-all-ast-grep
+          images: ghcr.io/${{ github.repository_owner }}/straigent-engine-languages-all-ast-grep
           tags: |
             type=sha
             type=ref,event=branch

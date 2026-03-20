@@ -1,4 +1,4 @@
-name: Build pdca-languages-python-tools-bandit
+name: Build straigent-engine-languages-python-tools-bandit
 
 on:
   push:
@@ -39,7 +39,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/${{ github.repository_owner }}/pdca-languages-python-tools-bandit
+          images: ghcr.io/${{ github.repository_owner }}/straigent-engine-languages-python-tools-bandit
           tags: |
             type=sha
             type=ref,event=branch

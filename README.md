@@ -1,12 +1,12 @@
-# pdca-images
+# straigent-images
 
-Docker image source repo for PDCA runtime/tooling containers that are built in GitHub Actions and published to GHCR.
+Docker image source repo for straigent-engine runtime/tooling containers that are built in GitHub Actions and published to GHCR.
 
 ## Scope
 
-This repo only builds images that add PDCA-specific value (custom tooling or pinned behavior).
+This repo only builds images that add straigent-engine-specific value (custom tooling or pinned behavior).
 
-Upstream images that are used directly by `pdca` are intentionally **not** rebuilt here.
+Upstream images that are used directly by `straigent-engine` are intentionally **not** rebuilt here.
 
 Current upstream-direct examples:
 - `golang:1.24` (Go runtime)
@@ -20,19 +20,19 @@ Current upstream-direct examples:
 
 Each workflow:
 - triggers on changes to its image directory or its own workflow file
-- builds and pushes to `ghcr.io/<owner>/pdca-...`
+- builds and pushes to `ghcr.io/<owner>/straigent-engine-...`
 - publishes `sha`, `branch`, `tag`, and `latest` (default branch) tags
 
 ## Images Currently Built
 
-- `pdca-languages-all-ast-grep`
-- `pdca-languages-go-tools-go-test-cov`
-- `pdca-languages-python-tools-bandit`
-- `pdca-languages-python-tools-pyright`
-- `pdca-languages-python-tools-pytest-cov`
-- `pdca-languages-python-tools-radon`
-- `pdca-languages-python-tools-ruff`
-- `pdca-languages-python-tools-tach`
+- `straigent-engine-languages-all-ast-grep`
+- `straigent-engine-languages-go-tools-go-test-cov`
+- `straigent-engine-languages-python-tools-bandit`
+- `straigent-engine-languages-python-tools-pyright`
+- `straigent-engine-languages-python-tools-pytest-cov`
+- `straigent-engine-languages-python-tools-radon`
+- `straigent-engine-languages-python-tools-ruff`
+- `straigent-engine-languages-python-tools-tach`
 
 ## Adding a New Image
 
@@ -40,6 +40,6 @@ Each workflow:
 2. Add one workflow in `.github/workflows/` for that context.
 3. Use the same naming pattern:
 - workflow name: `build-<resource-path>.yml`
-- image name: `ghcr.io/${{ github.repository_owner }}/pdca-<resource-path-with-dashes>`
+- image name: `ghcr.io/${{ github.repository_owner }}/straigent-engine-<resource-path-with-dashes>`
 
 For Docker/GHCR image names, normalize leading underscore path segments to avoid invalid references (example: `_all` becomes `all`).
