@@ -26,6 +26,8 @@ Each workflow:
 ## Images Currently Built
 
 - `straigent-engine-languages-all-ast-grep`
+- `straigent-engine-languages-all-cue`
+- `straigent-engine-languages-all-graphviz`
 - `straigent-engine-languages-all-gitleaks`
 - `straigent-engine-languages-all-import-linter`
 - `straigent-engine-languages-all-jscpd`
